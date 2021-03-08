@@ -2,10 +2,11 @@ var Engine = Matter.Engine,
   World = Matter.World,
   Events = Matter.Events,
   Bodies = Matter.Bodies;
- 
-var particles = [];
-var plinkos = [];
-
+  var particles = [];
+  var plinkos = [];
+  var divisions =[];
+  var particle;
+  
 var divisionHeight=300;
 var score =0;
 function setup() {
@@ -64,7 +65,7 @@ function draw() {
      
    }
    if(frameCount%60===0){
-     particles.push(new particle(random(width/2-30, width/2+30), 10,10));
+     particles.push(new Particle(random(width/2-30, width/2+30), 10,10));
      score++;
    }
  
