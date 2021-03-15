@@ -2,10 +2,10 @@ var Engine = Matter.Engine,
     World = Matter.World,
     Events = Matter.Events,
     Bodies = Matter.Bodies; 
-var particles = [];
+var balls = [];
 var plinkos = [];
 var divisions =[];
-var particle;
+var ball;
 
 var divisionHeight=300;
 var score =0;
@@ -62,9 +62,9 @@ function draw() {
      plinkos[i].display();  
   }
  
-    if(particle!=null)
+    if(ball!=null)
     {
-       particle.display();
+       ball.display();
   
   
     }
@@ -79,6 +79,6 @@ function draw() {
 
 function mousePressed()
 {
-  particle=new Particle(mouseX, 10, 10, 10);  
+  ball=new Ball(mouseX, 10, 10, 10);  
 }
 
